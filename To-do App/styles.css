@@ -6,7 +6,7 @@ box-sizing: border-box;
 
 }
 .container{
-    overflow: auto;
+overflow: auto;
 width: 100%;
 min-height: 100vh;
 background: linear-gradient(135deg, #153677, #4e085f);
@@ -14,18 +14,20 @@ padding: 10px;
 }
 .todo-app{
 width: 100%;
-max-width: 540px;
+max-width: 540px !important; /* Adjusted max-width for better view on desktop */
 background: #fff;
-margin: 100px auto 20px;
-padding: 40px 30px 70px;
+margin: 40px auto 20px;
+padding: 20px 15px 40px;
 border-radius: 10px;
-
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+font-size: 16px; /* Set a base font size for the app */
 }
 .todo-app h2{
     color: #69D7FB;
     display: flex;
     align-items : center;
     margin-bottom: 20px;
+    font-size: 1.5rem; /* 1.5 times the base font size */
 }
 .todo-app h2 img{
     width: 30px;
@@ -33,12 +35,12 @@ border-radius: 10px;
 }
 .row{
     display: flex;
-    align-items: center;
+    align-items: column; /* Switch to column layout on small screens */
     justify-content: space-between;
     background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+    border-radius: 20px; /* Slightly reduced border radius */
+    padding: 10px 15px; /* Adjusted padding */
+    margin-bottom: 15px; /* Slightly reduced margin */
 }
 input{
     flex : 1;
@@ -53,12 +55,13 @@ button{
     outline: none;
     background: #ff5945;
     color: #fff;
-    padding: 16px 50px;
+    padding: 16px 40px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 ul li{
+    color: #8329b7;
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -79,7 +82,7 @@ ul li::before{
     top: 12px;
 }
 ul li.checked{
-    color: #555;
+    color: #060101ad;
     text-decoration: line-through;
 }
 ul li.checked::before{
@@ -92,7 +95,7 @@ ul li span{
     width : 40px;
     height : 40px;
     font-size: 22px;
-    color: #555;
+    color: #060000;
 line-height: 40px;
 text-align: center;
 border-radius: 50%;
@@ -102,7 +105,29 @@ ul li span:hover{
     background-color: #edeef0 ;
 }
 @media only screen and (max-width: 540px) {
-    .todo-app, .row{
-      width: 100%;
+    .todo-app{
+     width: 90%; /* Adjusted width for smaller screens */
     }
   }
+  /* Use media queries for further adjustments on different screen sizes */
+@media only screen and (max-width: 540px) {
+    .todo-app {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+    }
+}
+@media only screen and (max-width: 540px) {
+    .row {
+        flex-direction: row; /* Revert to row layout */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Adjust padding for better spacing */
+        margin-bottom: 10px; /* Further reduced margin */
+    }
+}
+@media only screen and (max-width: 540px) {
+    button {
+        padding: 10px 15px; /* Adjusted padding for smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+        border-radius: 25px; /* Adjusted border radius */
+    }
+}
