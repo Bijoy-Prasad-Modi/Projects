@@ -12,11 +12,60 @@ hmtl, body{
     border-radius: 5px;
     cursor: pointer;
 }
-.row{
+
+.row, .row1{
     margin-top: 10px;
 }
 .row input{
-    padding: 16px 37px;
+    padding: 20px 2px;
     border: 2px solid black;
     border-radius: 5px;
+    font-size: 19px;
   }
+.button-plus{
+    padding : 20px 18px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-Mplus{
+    padding : 20px 14px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-Mminus{
+    padding : 20px 16px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-percentage{
+    padding: 20px 18px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0px; 
+}
+.button-AC{
+    padding: 20px 19px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 110px;
+    padding-left: 20px;
+    margin-left: 0px;
+}
+.button-delete{
+padding: 20px 17px;
+margin: 0 2px;
+border: 2px solid black;
+border-radius: 5px;
+cursor: pointer;
+margin-left: 1px;
+}
