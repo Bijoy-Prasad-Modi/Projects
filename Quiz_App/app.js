@@ -1,4 +1,4 @@
-// https://opentdb.com/api.php?amount=10
+// https://opentdb.com/api.php?amount=1&type=multiple
 
 
 const _question = document.getElementById('question');
@@ -25,7 +25,7 @@ _totalQuestion.textContent = totalQuestion;
 _correctScore.textContent = correctScore;
 })
 async function loadQuestion(){
-    const APIUrl = 'https://opentdb.com/api.php?amount=1';
+    const APIUrl = 'https://opentdb.com/api.php?amount=1&type=multiple';
     const result = await fetch(`${APIUrl}`);
     const data = await result.json();
     // console.log(data.results[0]);
