@@ -35,7 +35,7 @@ font-size: 16px; /* Set a base font size for the app */
 }
 .row{
     display: flex;
-    align-items: column; /* Switch to column layout on small screens */
+    align-items: center; /* Switch to column layout on small screens */
     justify-content: space-between;
     background: #edeef0;
     border-radius: 20px; /* Slightly reduced border radius */
@@ -47,15 +47,16 @@ input{
     border: none;
     outline: none;
     background: transparent;
-    padding: 10px;
+    padding: 10px 0px;
     font-weight: 14px;
+    text-align: center;
 }
 button{
     border: none;
     outline: none;
     background: #ff5945;
     color: #fff;
-    padding: 16px 40px;
+    padding: 16px 35px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 30px;
@@ -106,28 +107,22 @@ ul li span:hover{
 }
 @media only screen and (max-width: 540px) {
     .todo-app{
-     width: 90%; /* Adjusted width for smaller screens */
+     width: 100%; /* Adjusted width for smaller screens */
+     font-size: 14px; /* Adjust the font size for smaller screens */
     }
-  }
-  /* Use media queries for further adjustments on different screen sizes */
-@media only screen and (max-width: 540px) {
-    .todo-app {
-        font-size: 14px; /* Adjust the font size for smaller screens */
-    }
-}
-@media only screen and (max-width: 540px) {
     .row {
         flex-direction: row; /* Revert to row layout */
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 10px 20px; /* Adjust padding for better spacing */
         margin-bottom: 10px; /* Further reduced margin */
     }
-}
-@media only screen and (max-width: 540px) {
+    #input-box{
+        text-align: justify;
+    }
     button {
-        padding: 10px 15px; /* Adjusted padding for smaller screens */
-        font-size: 14px; /* Slightly smaller font size */
+        padding: 10px 16px; /* Adjusted padding for smaller screens */
+        font-size: 12px; /* Slightly smaller font size */
         border-radius: 25px; /* Adjusted border radius */
     }
-}
+  }
